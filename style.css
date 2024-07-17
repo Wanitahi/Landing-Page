@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Defining CSS variables for colors and max-width */
+:root {
+    --primary-color: #8000FF;
+    --text-dark: #000000;
+    --text-light: #F0FFF0;
+    --extra-light: #E0FFFF;
+    --white: #ffffff;
+    --black: #000000; /* Corrected the color value */
+    --max-width: 1200px;
+}
+
+/* Resetting default margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for sections with maximum width and padding */
+.section_container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+/* Styling for section headers with relative positioning and custom underline */
+.section_header {
+    margin: auto;
+    padding-bottom: .75rem;
+    width: fit-content;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.section_header::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 50px;
+    background-color: var(--primary-color);
+}
+
+/* Ensuring images are responsive and displayed as block elements */
+img {
+    width: 100%;
+    display: block; /* Changed from flex to block */
+}
+
+/* Removing default text decoration for links */
+a {
+    text-decoration: none;
+}
+
+/* Setting global font family */
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Styling for navigation bar with flexbox layout */
+.nav {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Styling for navigation logo */
+.nav_logo img {
+    max-width: 100px;
+}
+
+/* Styling for navigation links */
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+/* Styling for individual navigation links */
+.link a {
+    font-weight: 500;
+    color: var(--black);
+    transition: .3s;
+}
+
+/* Hover effect for navigation links */
+.link a:hover {
+    color: var(--primary-color);
+}
+
+/* Container styling for header */
+.header_container {
+    padding-top: 0;
+} 
+.story_container_section_header{
+    margin-bottom: 4rem;
+}
+.story_container p{
+    margin-bottom: 3rem; /* Changed from 4rem to 3rem */
+    color: var(--text-dark); /* Changed from var(--text-dark) to var(--text-light) */
+}
+.evolution_grid{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Changed from repeat(2, 1fr) to repeat(3, 1fr) */
+    gap: 2rem;
+    align-items: center;
+}
+.evolution_nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.evolution_nav a {
+    padding: 0.75rem 0;
+    font-weight: 600; /* Changed from 500 to 600 */
+    color: var(--text-dark);
+    border-top: 2px solid transparent;
+    transition: 0.3s; 
+    transition: background-color 0.3s; /* Added background-color transition effect */
+}
+.evolution_nav a:hover{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+     
+}
+.evolution_nav a .active{
+    border-color: var(--primary-color);
+} 
+.evolution_nav a p{
+    padding-top: 4rem;
+    border-top: 2px solid var(--text-light);
+}
